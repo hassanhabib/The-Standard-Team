@@ -3,4 +3,7 @@
 
 This is the engineering Standard for team culture, practices and code of conduct.
  
-[0 Introduction](https://github.com/hassanhabib/The-Standard-Team/blob/main/0%20Introduction/0%20Introduction.md)
+- [0 Introduction](https://github.com/hassanhabib/The-Standard-Team/blob/main/0%20Introduction/0%20Introduction.md)
+- 1 The Individual
+- 2 The Community
+- 3 The Purpose
