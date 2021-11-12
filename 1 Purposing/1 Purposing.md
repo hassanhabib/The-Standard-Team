@@ -46,31 +46,31 @@ Scenarios of any business are not meant to be technical. But they can dive into 
 -	Outcomes (Then)
 
 Here’s an example for a scenario:
-GIVEN a customer of ABC Bakery
-WHEN I want to order a pie
-THEN I should be able to place the order from home
+<br/><b>GIVEN</b> a customer of ABC Bakery
+<br/><b>WHEN</b> I want to order a pie
+<br/><b>THEN</b> I should be able to place the order from home
 
 This is an overall scenario that highlights the actor – which is the customer of the bakery. And the interactions which in case is the urge/intention to order a pie. Then the outcome which is the ability to order a pie online.
 This scenario outlines the actions, the trigger (the interaction) and then the outcome. It’s a very high-level requirement as it doesn’t define API endpoints, certain user interface or anything of that nature.
 Scenarios needs to always stay with the end-users, the actual customers of the product. And what they do and the outcomes they expect out of the software.
 Scenarios sometimes can hand-over to each other. The above scenario is a high-level scenario that can be followed by this scenario here:
 
-GIVEN a customer of ABC Bakery
-WHEN I order a pie online
-THEN I should receive it within 5 minutes timeframe
+<br/><b>GIVEN</b> a customer of ABC Bakery
+<br/><b>GIVEN</b> I order a pie online
+<br/><b>GIVEN</b> I should receive it within 5 minutes timeframe
 
 This scenario here added up on top of the previous one. It’s already established that customers can order online. Now we have a new scenario that is marketable to everyone where we can say: “We deliver our pies in less than 5 minutes guaranteed!”
 Think about your outcomes as something that can be advertised on TV for everyone including non-technical people. What do they care about in terms of outcomes? That’s where these scenarios live.
 
 Here’s a bunch of other examples for reference:
 
-GIVEN a cooker of ABC Bakery
-WHEN I need to see pending orders
-THEN I should be able to view all my pending orders
+<br/><b>GIVEN</b> a cooker of ABC Bakery
+<br/><b>GIVEN</b> I need to see pending orders
+<br/><b>GIVEN</b> I should be able to view all my pending orders
 
-GIVEN a manager of ABC Bakery
-WHEN I need to monitor the progress of my business
-THEN I should be able to see all activity of my business 
+<br/><b>GIVEN</b> a manager of ABC Bakery
+<br/><b>GIVEN</b> I need to monitor the progress of my business
+<br/><b>GIVEN</b> I should be able to see all activity of my business 
 
 The overall theme here is generic overall results. The cooker wants to be able to view all the incoming pending orders. The manager wants to see all activities on the business. Nothing technical or specific to how this is going to be implemented.
 More details are welcomed at this level. Scenarios are written in face-to-face meetings with customers. They are raw requirements not yet broken down into features, stories or tasks.
