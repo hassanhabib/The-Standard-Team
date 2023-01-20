@@ -12,3 +12,9 @@ This is the engineering Standard for team culture, practices and code of conduct
     - [1.1 Scenarios](https://github.com/hassanhabib/The-Standard-Team/blob/main/1%20Purposing/1%20Purposing.md#11-scenarios)
 - 2 The Individual
 - 3 The Community
+- [4 Practices](https://github.com/hassanhabib/The-Standard-Team/blob/main/4%20Practices/4%20Practices.md#practice)
+    - [4.1 Code Contribution](https://github.com/hassanhabib/The-Standard-Team/blob/main/4%20Practices/4%20Practices.md#code-contribution)
+        - [4.0.1 Projects](https://github.com/hassanhabib/The-Standard-Team/blob/main/4%20Practices/4%20Practices.md#projects)
+        - [4.0.2 Branches](https://github.com/hassanhabib/The-Standard-Team/blob/main/4%20Practices/4%20Practices.md#branches)
+        - [4.0.3 Commits](https://github.com/hassanhabib/The-Standard-Team/blob/main/4%20Practices/4%20Practices.md#commits)
+        - [4.0.4 Pull Requests](https://github.com/hassanhabib/The-Standard-Team/blob/main/4%20Practices/4%20Practices.md#pull-requests)
