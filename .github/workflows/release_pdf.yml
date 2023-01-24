@@ -40,7 +40,5 @@ jobs:
             -   name: Release
                 uses: softprops/action-gh-release@v1
                 with:
-                    files: |
-                        The-Standard-Team.pdf 
-                        The-Standard-Team.html
+                    files: The-Standard-Team.pdf 
                     token: ${{ secrets.RELEASE_TOKEN }}       
