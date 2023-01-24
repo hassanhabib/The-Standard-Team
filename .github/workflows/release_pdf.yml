@@ -5,6 +5,7 @@ on: push
 jobs:
     generate:
         runs-on: ubuntu-latest
+        if: startsWith(github.ref, 'refs/tags/')
         steps:
             -   name: Checkout
                 uses: actions/checkout@v3
@@ -36,3 +37,14 @@ jobs:
               with:
                 name: output PDF
                 path: The-Standard-Team.pdf
+            -   name: Release
+                uses: softprops/action-gh-release@v1
+                with:
+                    files: |
+                        The-Standard-Team.pdf 
+                        The-Standard-Team.html
+                    token: ${{ secrets.RELEASE_TOKEN }}
+            - name: Release Drafter
+              uses: release-drafter/release-drafter@v5
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}            
