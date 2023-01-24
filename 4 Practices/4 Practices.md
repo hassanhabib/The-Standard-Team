@@ -86,8 +86,8 @@ The variables can be subsituted
 * `[entity]` => the entity that your service / broker uses
 * `[action]` => the action
 
-
-**Category List**
+<div>
+<p><strong>Category List</strong></p>
 
 | Category       | Description |
 | -------------- | ----------- |
@@ -118,7 +118,7 @@ The variables can be subsituted
 | STANDARD       | When you update or introduce a new thing in The Standard           |
 | DESIGN         | Creating doumentation has design details for your architecture (High Level Design / Low Level Design)    |
 | BUSINESS       | Creating documentation that outlines your business processes / Standard Operating Procedures.  Work required to bring the customer to use your software. |
-
+</div>
 
 ### 4.1.2 Projects
 
