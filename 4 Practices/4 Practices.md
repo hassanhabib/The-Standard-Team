@@ -86,7 +86,7 @@ The variables can be subsituted
 * `[entity]` => the entity that your service / broker uses
 * `[action]` => the action
 
-<div>
+<div class="highlight">
 <p><strong>Category List</strong></p>
 
 | Category       | Description |
