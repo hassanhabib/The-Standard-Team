@@ -91,17 +91,19 @@ The variables can be subsituted
 | Category       | Description |
 | -------------- | ----------- |
 | INFRA          | Initial project setup, creating the build project / build scripts.                   |
-| PROVISION      | Creating your provions project / scripts.                                            |
-| RELEASE        | Infrastructure work to release software.                                             |
+| PROVISIONS     | Creating your provions project / scripts.                                            |
+| RELEASES       | Infrastructure work to release software.                                             |
 | DATA           | Creation of a data model (and its migration when EF is used)                         |
 | BROKERS        | When creating brokers to wrap external libraries, resources, services, or APIs       |
 | FOUNDATIONS    | When creating Foundation Services                                                    |
-| PROCESSING     | When creating Processing Services                                                    |
+| PROCESSINGS    | When creating Processing Services                                                    |
 | ORCHESTRATIONS | When creating Orchestration Services                                                 |
 | COORDINATIONS  | When creating Coordination Services                                                  |
-| MANAGEMENT     | When creating Management Services                                                    |
+| MANAGEMENTS    | When creating Management Services                                                    |
 | AGGREGATIONS   | When creating Aggregation Services                                                   |
-| EXPOSERS       | When creating Exposers i.e. Rest API end point (CONTROLLERS) or clients              |
+| CONTROLLERS    | When creating an exposer like a REST API                                             |
+| CLIENTS        | When creating an exposer on a library that others can use                            |
+| EXPOSERS       | When creating any other kind of exposer i.e. Program.cs                              |
 | BASE           | When creating frontend base components                                               |
 | COMPONENTS     | When creating component                                                              |
 | VIEWS          | When working on views                                                                |
@@ -148,10 +150,11 @@ Taarafo.Core
         |-- Loggings
         |-- Storages
   |-- Models
-        |-- Posts
-            |-- Exceptions
-        |-- Comments
-            |-- Exceptions
+        |-- Foundations
+            |-- Posts
+               |-- Exceptions
+            |-- Comments
+               |-- Exceptions
   |-- Migrations
   |-- Services
         |-- Foundations
