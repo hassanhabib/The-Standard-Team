@@ -187,7 +187,7 @@ If you are working on any code that does not require testing i.e. DATA, BROKERS,
 which uses the category and a description of the work done using this syntax `[CATEGORY]: [Description Of Work Completed]`, where the category is always in CAPS and the description in Pascal Case
 e.g.  `DATA: Add Student Model` OR `BROKERS: Insert Student` OR `CONTROLLERS: POST Student`  (See the category table above for a complete list of categories)
 
-### 4.1.2 Pull Requests
+### 4.1.3 Pull Requests
 
 When developers have completed their work, they can create a pull request with the main repository, which lets the project maintainer know that an update is ready to be integrated. 
 The Pull Request (PR) can be created with the name using this syntax `[CATEGORY]: [Description Of Work Completed]`, where the category is always in CAPS and the description in Pascal Case
