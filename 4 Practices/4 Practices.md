@@ -200,3 +200,224 @@ You can also link a pull request to an issue to show that a fix is in progress a
 e.g. `Closes #10` or if the PR cover multiple things, then you could do `Closes #10, closes #123`
 
 If you simply wish to link an issue without a closing action on merge, you can omit the keyword and just add #ISSUE-NUMBER e.g. `#10`
+
+
+### 4.1.5 Configurations
+
+Configuration settings are values that determine the behavior of a software application. 
+They can include anything from database connection strings and API keys to feature flags and logging levels. 
+By using configuration settings, developers can customize the behavior of their application without modifying the code, 
+making it easier to deploy and manage different environments.
+
+One popular way of storing configuration settings in .NET applications is by using the `appsettings.json` file. 
+This file is a JSON-formatted file that contains a set of key-value pairs representing configuration settings. 
+Developers can easily modify these settings to change the behavior of their application.
+
+However, not all configuration settings can be safely stored in `appsettings.json` files. 
+Sensitive data, such as API keys, database passwords, or any other data that could grant 
+unauthorized access to the application or its resources, should be kept secret. 
+Storing sensitive data in configuration files, especially in plain text format, can put the application's security at risk.
+
+It is very important for developers to follow secure coding practices and never store passwords 
+or other sensitive data in configuration provider code or in plain text configuration files. 
+Such sensitive data should be stored in a secure location like Azure Key Vault or in environment 
+variables that are set in a deployment environment. Storing passwords in local settings files is also 
+not recommended as this can easily lead to scenarios where passwords are accidentally checked into code repositories, 
+either because a developer has forgotten to exclude the file from version control or as a result of someone changing 
+it and then inadvertently including the sensitive files, putting the application's security at risk.
+
+One way of protecting sensitive data is by using **user secrets**.  User secrets is a feature in .NET that provides a 
+convenient way for developers to store and retrieve sensitive data during development. 
+This data is stored locally on the developer's machine and is not intended to be used in production. 
+While user secrets can be useful for keeping sensitive data out of source control and easily accessible during development, 
+it is important to note that they are not compatible with GitHub workflow actions. 
+Instead, developers should consider using more secure methods for storing secrets, 
+such as environment variables or storing them in a secure location like `GitHub Action Secrets` or `Azure Key Vault`.  
+As user secrets is not directly compatible with GitHub build pipelines we will not explore this option further.
+
+Another way of protecting sensitive data is the use of **environment variables**. 
+Environment variables are variables that are set in the operating system, which can be accessed by applications at runtime. 
+
+By using both **appsettings.json** and **environment variables**, 
+developers can separate sensitive data from other configuration settings, 
+making it easier to manage and secure. Additionally, 
+this approach enables developers to store their configuration settings securely in a build pipeline, 
+ensuring that sensitive data is protected throughout the development lifecycle.
+
+#### 4.1.5.1 appsettings.json
+
+A .NET app will be automatically load and register `appsettings.json` and `appsettings.{Environment}.json` with the IConfiguration 
+interface during application startup, if the files is located in the application's root directory. 
+This means that the key-value pairs defined in the appsettings.json file will be accessible through the IConfiguration object, 
+allowing developers to easily access and use the configuration settings throughout their application.
+
+It's worth noting that in addition to the appsettings.json file, there are other configuration providers available in 
+.NET that allow developers to load configuration settings from various sources, 
+such as environment variables or command-line arguments. 
+(Developers can also create their own custom configuration providers to load configuration settings from other sources if needed.)
+
+Configuration sources are read in the order that their configuration providers are specified. 
+Order configuration providers in code to suit the priorities for the underlying configuration sources that the app requires.
+
+A typical sequence of configuration providers is:
+
+1. appsettings.json
+2. appsettings.{Environment}.json
+3. User secrets
+4. Environment variables using the Environment Variables configuration provider.
+5. Command-line arguments using the Command-line configuration provider.
+
+Lets look at some code samples to see how all this works.
+
+#### 4.1.5.1 Application Settings
+
+**appsettings.json**
+```cs
+{
+  "MySettings": {
+    "ApiUrl": "https://api.somesite.com/",    
+    "ApiKey": "1ae4e397-ec3c-4ed7-8280-a17d0e2cbe78",
+    "OrganisationId": "1bac6df0-cd68-4ce5-9c29-b2beb58201cd"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+
+With the above `appsettings.json` file we can then load our variables like this:
+```cs
+    string apiUrl = configuration["MySettings:ApiUrl"];
+    string apiKey = configuration["MySettings:ApiKey"];
+    string organisationId = configuration["MySettings:OrganisationId"];
+```
+ 
+#### 4.1.5.2 Environment Variables
+
+We can add environment variables to a web application by doing this:
+```cs
+var builder = WebApplication.CreateBuilder(args);
+...
+builder.Configuration.AddEnvironmentVariables();
+...
+var app = builder.Build();
+```
+
+or if you want to play with this in a Console App or Unit Test, you can do this:
+
+```cs
+var configurationBuilder = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+    .AddEnvironmentVariables("MYAPP_ACCEPTANCE_");
+
+this.configuration = configurationBuilder.Build();
+```
+**NOTE** that we have defined a prefix that environment variables must start with.  
+This prefix will automatically be removed from the environment variabl names by the configuration builder.  
+This is a very useful feature as you can now store environment variables with the same name for multiple apps and/or environments.
+
+Up to this point we will still get the same values if we get our config items as we have not set the values for any environment variables yet.
+
+In C# .NET, working with environment variables is straightforward. 
+The Environment class provides several methods for reading and setting environment variables. 
+For example, to read an environment variable, you can use the `Environment.GetEnvironmentVariable` method, 
+passing in the name of the variable you want to retrieve. 
+To set an environment variable, you can use the `Environment.SetEnvironmentVariable` method, providing the name of the variable and its value. 
+You can also use the command line to set the enviroment variables by running the SETX command.
+
+For demonstration we will leave the value of `MySettings:ApiUrl` in appsettings.json
+
+Next we will set the value of `MySettings:ApiKey` through this line of code
+```cs
+Environment.SetEnvironmentVariable("MYSETTINGS:APIKEY", "3d4a1c55-fcd7-4b34-8536-99c8ae6ae33c");
+```
+
+and for the `MySettings:OrganisationId` we will use the command line argument through a console window with administrative priviledges
+```cs
+setx MYSETTINGS:APIKEY "b2440ae9-cad2-4d70-b138-4a807abe1bb7"
+```
+**NOTE**
+Visual Studio preloads the environment variables when it starts, and it caches them until the application is closed.  
+Unlike environment variables set through code, those set using the command line will not be immediately be available due to the preload behaviour.  
+**You will need to close Visual Studio and re-open it.**
+
+
+Once you have reloaded Visual Studio we can get the values from the configuration again by doing this:
+```cs
+    string apiUrl = configuration["MySettings:ApiUrl"];
+    string apiKey = configuration["MySettings:ApiKey"];
+    string organisationId = configuration["MySettings:OrganisationId"];
+```
+
+You will notice that the ApiUrl is the same as before, but the values have now changed for `MySettings:ApiKey` and `MySettings:OrganisationId` and they are now equal to the values we specified for the environment variables via code and through SETX on the command line.
+
+You can also remove environment variables through code by setting the value to `null`.
+Environment.SetEnvironmentVariable("MYSETTINGS:APIKEY", null);
+
+OR via the command line you can do
+```cs
+setx MYSETTINGS:APIKEY /delete
+```
+
+Or if you prefer a GUI, you can also go to SYSTEM PROPERTES > ENVIRONMENT VARIABLES where you can ADD / REMOVE environment variables.
+
+#### 4.1.5.3 GitHub Actions Workflow
+
+To setup your environment variables for use within GitHub we will need to setup repository secrets and add a section at the beginning of your workflow file.
+
+1. Go to the GitHub repository where you want to use these settings and click on "Settings" in the top navigation bar.
+
+2. In the left sidebar, click on "Secrets" and then click on "New repository secret" button.
+
+3. Create three new secrets named "MYAPP_ACCEPTANCE_MYSETTINGS__APIKEY", and "MYAPP_ACCEPTANCE_MYSETTINGS__ORGANISATIONID", 
+respectively, with the corresponding values for "ApiUrl", "ApiKey", and "OrganisationId" from the given settings.  
+
+    **NOTE** 
+    * We have prefixed our environment variables with `MYAPP_ACCEPTANCE_` to match the earlier configuration of `.AddEnvironmentVariables("MYAPP_ACCEPTANCE_");`.
+    * The other difference is that a colon (:) is not allowed on GitHub Secrets to represent a hierarchy and you have to use a double underscore (__) instead.
+
+4. To expose these secrets as environment variables in the GitHub Action Workflow, add the following code snippet at the beginning of your workflow file:
+
+```yaml
+env:
+  API_URL: ${{ secrets.MySettings__ApiUrl }}
+  API_KEY: ${{ secrets.MySettings__ApiKey }}
+  ORG_ID: ${{ secrets.MySettings__OrganisationId }
+```
+
+A full example of the `dotnet.yml` file will look like this:
+```yaml
+name: MyApplication Build
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      ApiKey: ${{ secrets.MYAPP_ACCEPTANCE_MYSETTINGS__APIKEY }}
+      OrgId: ${{ secrets.MYAPP_ACCEPTANCE_MYSETTINGS__ORGANISATIONID }}
+    steps:
+    - name: Pulling Code
+      uses: actions/checkout@v2
+    - name: Installing .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 7.0.201
+        include-prerelease: false
+    - name: Restoring Packages
+      run: dotnet restore
+    - name: Building Solution
+      run: dotnet build --no-restore
+    - name: Running Tests
+      run: dotnet test --no-build --verbosity normal
+```
