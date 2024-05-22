@@ -103,6 +103,7 @@ The variables can be subsituted
 | AGGREGATIONS   | When creating Aggregation Services                                                   |
 | CONTROLLERS    | When creating an exposer like a REST API                                             |
 | CLIENTS        | When creating an exposer on a library that others can use                            |
+| PROVIDERS      | When creating an exposer on a SPAL provider library that others can use              |
 | EXPOSERS       | When creating any other kind of exposer i.e. Program.cs                              |
 | BASE           | When creating frontend base components                                               |
 | COMPONENTS     | When creating component                                                              |
