@@ -120,6 +120,8 @@ The variables can be subsituted
 | STANDARD       | When you update or introduce a new thing in The Standard           |
 | DESIGN         | Creating doumentation has design details for your architecture (High Level Design / Low Level Design)    |
 | BUSINESS       | Creating documentation that outlines your business processes / Standard Operating Procedures.  Work required to bring the customer to use your software. |
+| IMPORT         | When you are copying code and tests over from another system with no or minor changes like namepsaces |
+| STATUS         | When updating STATUS information in your design documentation i.e. changing milestone color indicators from black or red to orange to green OR changing text indcators NOT STARTED / IN PROGRESS / BLOCKED / COMPLETED |
 
 ### 4.1.2 Projects
 
@@ -469,6 +471,14 @@ The following is a list of all types of contributions and the value for each:
 | MAJOR CONTROLLER           | 5            |
 | MEDIUM CONTROLLER          | 3            |
 | MINOR CONTROLLER           | 1            |
+| CLIENT                     | 5            |
+| MAJOR CLIENT               | 5            |
+| MEDIUM CLIENT              | 3            |
+| MINOR CLIENT               | 1            |
+| EXPOSER                    | 5            |
+| MAJOR EXPOSER              | 5            |
+| MEDIUM EXPOSER             | 3            |
+| MINOR EXPOSER              | 1            |
 | BASE                       | 5            |
 | MAJOR BASE                 | 5            |
 | MEDIUM BASE                | 3            |
