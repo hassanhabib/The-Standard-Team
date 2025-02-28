@@ -482,6 +482,9 @@ The following is a list of all types of contributions and the value for each:
 | MEDIUM PAGE                | 3            |
 | MINOR PAGE                 | 1            |
 | ACCEPTANCE                 | 10           |
+| MAJOR ACCEPTANCE           | 10           |
+| MEDIUM ACCEPTANCE          | 5            |
+| MINOR ACCEPTANCE           | 3            |
 | INTEGRATION                | 15           |
 | CODE RUB                   | 1            |
 | MAJOR CODE RUB             | 10           |
