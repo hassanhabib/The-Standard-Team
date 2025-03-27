@@ -122,6 +122,7 @@ The variables can be subsituted
 | BUSINESS       | Creating documentation that outlines your business processes / Standard Operating Procedures.  Work required to bring the customer to use your software. |
 | IMPORT         | When you are copying code and tests over from another system with no or minor changes like namepsaces |
 | STATUS         | When updating STATUS information in your design documentation i.e. changing milestone color indicators from black or red to orange to green OR changing text indcators NOT STARTED / IN PROGRESS / BLOCKED / COMPLETED |
+| MENTORSHIP     | When conducting a meeting under the MENTORSHIP title, the developer is responsible for teaching others or assisting in problem-solving. These sessions focus on knowledge sharing, skill development, and collaborative troubleshooting. Points are calculated based on the duration of the session per hour. |
 
 ### 4.1.2 Projects
 
@@ -515,6 +516,7 @@ The following is a list of all types of contributions and the value for each:
 | MEDIUM DESIGN              | 10           |
 | MINOR DESIGN               | 5            |
 | STATUS                     | 1            |
+| MENTORSHIP                 | 10           |
 
 Each one of these categories have been defined above in the previous section.
 
