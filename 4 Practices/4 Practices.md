@@ -91,6 +91,9 @@ The variables can be subsituted
 | Category       | Description |
 | -------------- | ----------- |
 | INFRA          | Initial project setup, creating the build project / build scripts.                   |
+| MINOR INFRA    | Minor updates, removing or adding simple configurations or files.                    |
+| MEDIUM INFRA   | Medium updates, removing or adding simple configurations or files.                   |
+| MAJOR INFRA    | Major updates, removing or adding simple configurations or files.                    |
 | PROVISIONS     | Creating your provions project / scripts.                                            |
 | RELEASES       | Infrastructure work to release software.                                             |
 | DATA           | Creation of a data model (and its migration when EF is used)                         |
@@ -433,6 +436,9 @@ The following is a list of all types of contributions and the value for each:
 | Title Starts With          | Return Value |
 |----------------------------|--------------|
 | INFRA                      | 10           |
+| MINOR INFRA                | 1            |
+| MEDIUM INFRA               | 3            |
+| MAJOR INFRA                | 10           |
 | PROVISION                  | 10           |
 | RELEASE                    | 10           |
 | DATA                       | 5            |
