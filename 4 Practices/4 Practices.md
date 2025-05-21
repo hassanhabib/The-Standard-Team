@@ -172,6 +172,7 @@ The variables can be subsituted
 | IMPORT                 | When you are copying code and tests over from another system with no or minor changes like namepsaces |
 | STATUS                 | When updating STATUS information in your design documentation i.e. changing milestone color indicators from black or red to orange to green OR changing text indcators NOT STARTED / IN PROGRESS / BLOCKED / COMPLETED |
 | MENTORSHIP             | When conducting a meeting under the MENTORSHIP title, the developer is responsible for teaching others or assisting in problem-solving. These sessions focus on knowledge sharing, skill development, and collaborative troubleshooting. Points are calculated based on the duration of the session per hour. |
+| DISCUSSION             | When conducting a discussion meeting, surrounding technical issues. Points are calculated based on the duration of the session per hour. |
 
 ### 4.1.2 Projects
 
