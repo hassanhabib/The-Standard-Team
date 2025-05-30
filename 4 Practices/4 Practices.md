@@ -100,6 +100,10 @@ The variables can be subsituted
 | MAJOR DATA             | Changing existing data model with 5+ property additions/modifications. |
 | MEDIUM DATA            | Changing existing data model with 3-4 property additions/modifications. |
 | MINOR DATA             | Changing existing data model with 1-2 property additions/modifications. |
+| MIGRATION              | Moving or transforming data from one system to another, updating existing data, or generating reports. |
+| MAJOR MIGRATION        | Major data migration or transformation tasks involving significant data volume or complexity. |
+| MEDIUM MIGRATION       | Medium complexity data migration or updates involving moderate data volume or effort. |
+| MINOR MIGRATION        | Minor data migration or simple data updates with low complexity or small data volume. |
 | BROKERS                | When creating a broker to wrap external libraries, resources, services, or APIs |
 | MAJOR BROKERS          | Major changes to existing broker (significant functionality changes). |
 | MEDIUM BROKERS         | Medium changes to existing broker (multiple significant modifications). |
@@ -508,6 +512,10 @@ The following is a list of all types of contributions and the value for each:
 | MAJOR DATA                 | 5            |
 | MEDIUM DATA                | 3            |
 | MINOR DATA                 | 1            |
+| MIGRATION                  | 20            |
+| MAJOR MIGRATION            | 20            |
+| MEDIUM MIGRATION           | 10            |
+| MINOR MIGRATION            | 5            |
 | BROKER                     | 5            |
 | MAJOR BROKER               | 5            |
 | MEDIUM BROKER              | 3            |
