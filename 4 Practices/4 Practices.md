@@ -89,90 +89,116 @@ The variables can be subsituted
 ### 4.1.1.3 Category List
 
 | Category               | Description |
-| --------------         | ----------- |
-| INFRA                  | Initial project setup, creating the build project / build scripts.                   |
-| MAJOR INFRA            | Major updates, removing or adding simple configurations or files.                    |
-| MEDIUM INFRA           | Medium updates, removing or adding simple configurations or files.                   |
-| MINOR INFRA            | Minor updates, removing or adding simple configurations or files.                    |
-| PROVISIONS             | Creating provision project / scripts.                                                |
-| RELEASES               | Infrastructure work to release software.                                             |
-| DATA                   | Creation of a data model (and its migration when EF is used)                         |
-| BROKERS                | When creating brokers to wrap external libraries, resources, services, or APIs       |
-| MAJOR BROKERS          | |
-| MEDIUM BROKERS         | |
-| MINOR BROKERS          | |
-| FOUNDATIONS            | When creating Foundation Services                                                    |
-| MAJOR FOUNDATIONS      | |
-| MEDIUM FOUNDATIONS     | |
-| MINOR FOUNDATIONS      | |
-| PROCESSINGS            | When creating Processing Services                                                    |
-| MAJOR PROCESSINGS      | |
-| MEDIUM PROCESSINGS     | |
-| MINOR PROCESSINGS      | |
-| ORCHESTRATIONS         | When creating Orchestration Services                                                 |
-| MAJOR ORCHESTRATIONS   | |
-| MEDIUM ORCHESTRATIONS  | |
-| MINOR ORCHESTRATIONS   | |
-| COORDINATIONS          | When creating Coordination Services                                                  |
-| MAJOR COORDINATIONS    | |
-| MEDIUM COORDINATIONS   | |
-| MINOR COORDINATIONS    | |
-| MANAGEMENTS            | When creating Management Services                                                    |
-| MAJOR MANAGEMENTS      | |
-| MEDIUM MANAGEMENTS     | |
-| MINOR MANAGEMENTS      | |
-| AGGREGATIONS           | When creating Aggregation Services                                                   |
-| MAJOR AGGREGATIONS     | |
-| MEDIUM AGGREGATIONS    | |
-| MINOR AGGREGATIONS     | |
-| CONTROLLERS            | When creating an exposer like a REST API                                             |
-| MAJOR CONTROLLERS      | |
-| MEDIUM CONTROLLERS     | |
-| MINOR CONTROLLERS      | |
-| CLIENTS                | When creating an exposer on a library that others can use                            |
-| PROVIDERS              | When creating an exposer on a SPAL provider library that others can use              |
-| EXPOSERS               | When creating any other kind of exposer i.e. Program.cs                              |
-| BASES                  | When creating frontend base components                                               |
-| MAJOR BASES            | |
-| MEDIUM BASES           | |
-| MINOR BASES            | |
-| COMPONENTS             | When creating components                                                             |
-| MAJOR COMPONENTS       | |
-| MEDIUM COMPONENTS      | |
-| MINOR COMPONENTS       | |
-| VIEWS                  | When creating views                                                                  |
-| MAJOR VIEWS            | |
-| MEDIUM VIEWS           | |
-| MINOR VIEWS            | |
-| PAGES                  | When creating Blazor pages                                                           |
+|------------------------|-------------|
+| INFRA                  | Initial project setup, creating the build project / build scripts. |
+| MAJOR INFRA            | Major updates, removing or adding simple configurations or files. |
+| MEDIUM INFRA           | Medium updates, removing or adding simple configurations or files. |
+| MINOR INFRA            | Minor updates, removing or adding simple configurations or files. |
+| PROVISIONS             | Creating provision project / scripts. |
+| RELEASES               | Infrastructure work to release software. |
+| DATA                   | Creation of a data model (and its migration when EF is used) |
+| MAJOR DATA             | Changing existing data model with 5+ property additions/modifications. |
+| MEDIUM DATA            | Changing existing data model with 3-4 property additions/modifications. |
+| MINOR DATA             | Changing existing data model with 1-2 property additions/modifications. |
+| MIGRATION              | Moving or transforming data from one system to another, updating existing data, or generating reports. |
+| MAJOR MIGRATION        | Major data migration or transformation tasks involving significant data volume or complexity. |
+| MEDIUM MIGRATION       | Medium complexity data migration or updates involving moderate data volume or effort. |
+| MINOR MIGRATION        | Minor data migration or simple data updates with low complexity or small data volume. |
+| BROKERS                | When creating a broker to wrap external libraries, resources, services, or APIs |
+| MAJOR BROKERS          | Major changes to existing broker (significant functionality changes). |
+| MEDIUM BROKERS         | Medium changes to existing broker (multiple significant modifications). |
+| MINOR BROKERS          | Minor changes to existing broker (simple modifications). |
+| FOUNDATIONS            | When creating a Foundation Service |
+| MAJOR FOUNDATIONS      | Changing existing foundation service with writing or updating all or to 5+ tests. |
+| MEDIUM FOUNDATIONS     | Changing existing foundation service with writing or updating to 3-4 tests. |
+| MINOR FOUNDATIONS      | Changing existing foundation service with writing or updating to 1-2 tests. |
+| PROCESSINGS            | When creating a Processing Service |
+| MAJOR PROCESSINGS      | Changing existing processing service with writing or updating all or to 5+ tests. |
+| MEDIUM PROCESSINGS     | Changing existing processing service with writing or updating to 3-4 tests. |
+| MINOR PROCESSINGS      | Changing existing processing service with writing or updating to 1-2 tests. |
+| ORCHESTRATIONS         | When creating an Orchestration Service |
+| MAJOR ORCHESTRATIONS   | Changing existing orchestration service with writing or updating all or to 5+ tests. |
+| MEDIUM ORCHESTRATIONS  | Changing existing orchestration service with writing or updating to 3-4 tests. |
+| MINOR ORCHESTRATIONS   | Changing existing orchestration service with writing or updating to 1-2 tests. |
+| COORDINATIONS          | When creating a Coordination Service |
+| MAJOR COORDINATIONS    | Changing existing coordination service with writing or updating all or to 5+ tests. |
+| MEDIUM COORDINATIONS   | Changing existing coordination service with writing or updating to 3-4 tests. |
+| MINOR COORDINATIONS    | Changing existing coordination service with writing or updating to 1-2 tests. |
+| MANAGEMENTS            | When creating a Management Service |
+| MAJOR MANAGEMENTS      | Changing existing management service with writing or updating all or to 5+ tests. |
+| MEDIUM MANAGEMENTS     | Changing existing management service with writing or updating to 3-4 tests. |
+| MINOR MANAGEMENTS      | Changing existing management service with writing or updating to 1-2 tests. |
+| AGGREGATIONS           | When creating an Aggregation Service |
+| MAJOR AGGREGATIONS     | Changing existing aggregation service with writing or updating all or to 5+ tests. |
+| MEDIUM AGGREGATIONS    | Changing existing aggregation service with writing or updating to 3-4 tests. |
+| MINOR AGGREGATIONS     | Changing existing aggregation service with writing or updating to 1-2 tests. |
+| CONTROLLERS            | When creating a Controller |
+| MAJOR CONTROLLERS      | Changing existing controller with writing or updating all or to 5+ tests. |
+| MEDIUM CONTROLLERS     | Changing existing controller with writing or updating to 3-4 tests. |
+| MINOR CONTROLLERS      | Changing existing controller with writing or updating to 1-2 tests. |
+| CLIENTS                | When creating a client on a library that others can use |
+| MAJOR CLIENTS          | Changing existing client with writing or updating to 5+ tests. |
+| MEDIUM CLIENTS         | Changing existing client with writing or updating to 3-4 tests. |
+| MINOR CLIENTS          | Changing existing client with writing or updating to 1-2 tests. |
+| PROVIDERS              | When creating a provider on a SPAL provider library that others can use |
+| EXPOSERS               | When creating any other kind of exposer i.e. Program.cs |
+| MAJOR EXPOSERS         |  |
+| MEDIUM EXPOSERS        |  |
+| MINOR EXPOSERS         |  |
+| VIEWS                  | When creating a View Service |
+| MAJOR VIEWS            | Changing existing view with writing or updating all or to 5+ tests. |
+| MEDIUM VIEWS           | Changing existing view with writing or updating to 3-4 tests. |
+| MINOR VIEWS            | Changing existing view with writing or updating to 1-2 tests. |
+| BASES                  | When creating a Frontend Base Component |
+| MAJOR BASES            |  |
+| MEDIUM BASES           |  |
+| MINOR BASES            |  |
+| COMPONENTS             | When creating a Component |
+| MAJOR COMPONENTS       | Changing existing component with writing or updating all or to 5+ tests. |
+| MEDIUM COMPONENTS      | Changing existing component with writing or updating to 3-4 tests. |
+| MINOR COMPONENTS       | Changing existing component with writing or updating to 1-2 tests. |
+| PAGES                  | When creating a Blazor Page |
 | MAJOR PAGES            | |
 | MEDIUM PAGES           | |
 | MINOR PAGES            | |
-| ACCEPTANCE             | When writing Acceptance tests                                                        |
+| ACCEPTANCE             | When writing an Acceptance Test |
 | MAJOR ACCEPTANCE       | |
 | MEDIUM ACCEPTANCE      | |
 | MINOR ACCEPTANCE       | |
-| INTEGRATIONS           | When writing Integration Tests                                                       |
-| CODE RUB               | Small change to fix things styling, code formatting, spelling  (Not for bug fixes)   |
-| MAJOR CODE RUB         | |
-| MEDIUM CODE RUB        | |
-| MINOR CODE RUB         | |
-| MINOR FIX              | A minor bug fix / change that do not significantly alter the overall functionality of the program.       |
-| MEDIUM FIX             | A fix that has a moderate level of impact on the functionality or performance of a program or system.  It may cause some inconvenience or minor disruption to the user experience, but it is not critical and can typically be resolved with a moderate amount of effort.  |
-| MAJOR FIX              | A major bug fix is a significant repair or correction made to a software program or system that addresses a critical or major issue that is preventing the program or system from functioning correctly. This type of bug fix is typically classified as high priority, as it affects the overall functionality and usability of the program or system, and can have a significant impact on the user experience. Major bug fixes often require extensive testing and validation before they can be released.           |
+| INTEGRATION            | When writing an Integration Test |
+| MAJOR INTEGRATION      | |
+| MEDIUM INTEGRATION     | |
+| MINOR INTEGRATION      | |
+| CODE RUB               | Small change to fix things styling, code formatting, spelling (Not for bug fixes) |
+| MAJOR CODE RUB         | Significant code cleanup affecting multiple files. |
+| MEDIUM CODE RUB        | Moderate code cleanup affecting several files. |
+| MINOR CODE RUB         | Minor code cleanup affecting few files. |
+| MINOR FIX              | A minor bug fix / change that do not significantly alter the overall functionality of the program. |
+| MEDIUM FIX             | A fix that has a moderate level of impact on the functionality or performance of a program or system. |
+| MAJOR FIX              | A major bug fix is a significant repair or correction made to a software program or system that addresses a critical or major issue. |
 | DOCUMENTATION          | General documentation |
-| CONFIG                 | Any configuration changes i.e. setting up appsettings.json for your various environments.    |
+| CONFIG                 | Any configuration changes i.e. setting up appsettings.json for your various environments. |
 | REVIEW                 | Reviewing submitted work in the context of project standards, and Standard compliance. |
-| STANDARD               | When you update or introduce a new thing in The Standard           |
-| DESIGN                 | Creating documentation has design details for your architecture (High Level Design / Low Level Design)    |
-| MAJOR DESIGN           | |
-| MEDIUM DESIGN          | |
-| MINOR DESIGN           | |
-| BUSINESS               | Creating documentation that outlines your business processes / Standard Operating Procedures.  Work required to bring the customer to use your software. |
-| IMPORT                 | When you are copying code and tests over from another system with no or minor changes like namepsaces |
-| STATUS                 | When updating STATUS information in your design documentation i.e. changing milestone color indicators from black or red to orange to green OR changing text indcators NOT STARTED / IN PROGRESS / BLOCKED / COMPLETED |
-| MENTORSHIP             | When conducting a meeting under the MENTORSHIP title, the developer is responsible for teaching others or assisting in problem-solving. These sessions focus on knowledge sharing, skill development, and collaborative troubleshooting. Points are calculated based on the duration of the session per hour. |
-| DISCUSSION             | When conducting a discussion meeting, surrounding technical issues. Points are calculated based on the duration of the session per hour. |
+| STANDARD               | When you update or introduce a new thing in The Standard |
+| DESIGN                 | Creating documentation has design details for your architecture (High Level Design / Low Level Design) |
+| MAJOR DESIGN           | Designing 15+ service methods. |
+| MEDIUM DESIGN          | Designing 10-14 service methods. |
+| MINOR DESIGN           | Designing <10 service methods. |
+| BUSINESS               | Creating documentation that outlines your business processes / Standard Operating Procedures. |
+| IMPORT                 | When you are copying code and tests over from another system with no or minor changes like namespaces |
+| STATUS                 | When updating STATUS information in your design documentation. |
+| PLANNING               | |
+| MAJOR PLANNING         | |
+| MEDIUM PLANNING        | |
+| MINOR PLANNING         | |
+| MENTORSHIP             | 60+ minute session. |
+| MAJOR MENTORSHIP       | 60+ minute session. |
+| MEDIUM MENTORSHIP      | 45 minute session. |
+| MINOR MENTORSHIP       | 30 minute session. |
+| DISCUSSION             | When conducting a discussion meeting under the DISCUSSION title, surrounding technical issues. |
+| MAJOR DISCUSSION       | 60+ minute discussion. |
+| MEDIUM DISCUSSION      | 45 minute discussion. |
+| MINOR DISCUSSION       | 30 minute discussion. |
 
 ### 4.1.2 Projects
 
@@ -483,12 +509,17 @@ The following is a list of all types of contributions and the value for each:
 | Title Starts With          | Return Value |
 |----------------------------|--------------|
 | INFRA                      | 10           |
-| MINOR INFRA                | 1            |
-| MEDIUM INFRA               | 3            |
 | MAJOR INFRA                | 10           |
-| PROVISION                  | 10           |
-| RELEASE                    | 10           |
+| MEDIUM INFRA               | 3            |
+| MINOR INFRA                | 1            |
 | DATA                       | 5            |
+| MAJOR DATA                 | 5            |
+| MEDIUM DATA                | 3            |
+| MINOR DATA                 | 1            |
+| MIGRATION                  | 20            |
+| MAJOR MIGRATION            | 20            |
+| MEDIUM MIGRATION           | 10            |
+| MINOR MIGRATION            | 5            |
 | BROKER                     | 5            |
 | MAJOR BROKER               | 5            |
 | MEDIUM BROKER              | 3            |
@@ -497,10 +528,6 @@ The following is a list of all types of contributions and the value for each:
 | MAJOR FOUNDATION           | 10           |
 | MEDIUM FOUNDATION          | 5            |
 | MINOR FOUNDATION           | 1            |
-| VIEW                       | 10           |
-| MAJOR VIEW                 | 10           |
-| MEDIUM VIEW                | 5            |
-| MINOR VIEW                 | 1            |
 | PROCESSING                 | 15           |
 | MAJOR PROCESSING           | 15           |
 | MEDIUM PROCESSING          | 10           |
@@ -525,14 +552,18 @@ The following is a list of all types of contributions and the value for each:
 | MAJOR CONTROLLER           | 5            |
 | MEDIUM CONTROLLER          | 3            |
 | MINOR CONTROLLER           | 1            |
-| CLIENT                     | 5            |
-| MAJOR CLIENT               | 5            |
-| MEDIUM CLIENT              | 3            |
-| MINOR CLIENT               | 1            |
-| EXPOSER                    | 5            |
-| MAJOR EXPOSER              | 5            |
-| MEDIUM EXPOSER             | 3            |
-| MINOR EXPOSER              | 1            |
+| ACCEPTANCE                 | 10           |
+| MAJOR ACCEPTANCE           | 10           |
+| MEDIUM ACCEPTANCE          | 5            |
+| MINOR ACCEPTANCE           | 3            |
+| INTEGRATION                | 15           |
+| MAJOR INTEGRATION          | 15           |
+| MEDIUM INTEGRATION         | 10           |
+| MINOR INTEGRATION          | 10           |
+| VIEW                       | 10           |
+| MAJOR VIEW                 | 10           |
+| MEDIUM VIEW                | 5            |
+| MINOR VIEW                 | 1            |
 | BASE                       | 5            |
 | MAJOR BASE                 | 5            |
 | MEDIUM BASE                | 3            |
@@ -545,31 +576,47 @@ The following is a list of all types of contributions and the value for each:
 | MAJOR PAGE                 | 5            |
 | MEDIUM PAGE                | 3            |
 | MINOR PAGE                 | 1            |
-| ACCEPTANCE                 | 10           |
-| MAJOR ACCEPTANCE           | 10           |
-| MEDIUM ACCEPTANCE          | 5            |
-| MINOR ACCEPTANCE           | 3            |
-| INTEGRATION                | 15           |
-| CODE RUB                   | 1            |
-| MAJOR CODE RUB             | 10           |
-| MEDIUM CODE RUB            | 5            |
-| MINOR CODE RUB             | 1            |
-| DOCUMENTATION              | 1            |
-| CONFIG                     | 5            |
-| MINOR FIX                  | 5            |
-| MEDIUM FIX                 | 10           |
-| MAJOR FIX                  | 20           |
-| REVIEW                     | 1            |
-| STANDARD                   | 100          |
+| CLIENT                     | 5            |
+| MAJOR CLIENT               | 5            |
+| MEDIUM CLIENT              | 3            |
+| MINOR CLIENT               | 1            |
+| EXPOSER                    | 5            |
+| MAJOR EXPOSER              | 5            |
+| MEDIUM EXPOSER             | 3            |
+| MINOR EXPOSER              | 1            |
 | DESIGN                     | 20           |
-| BUSINES                    | 50           |
-| IMPORT                     | 5            |
-| UNKNOWN                    | 0            |
 | MAJOR DESIGN               | 20           |
 | MEDIUM DESIGN              | 10           |
 | MINOR DESIGN               | 5            |
+| MAJOR FIX                  | 20           |
+| MEDIUM FIX                 | 10           |
+| MINOR FIX                  | 5            |
+| PLANNING                   | 15           |
+| MAJOR PLANNING             | 15           |
+| MINOR PLANNING             | 10           |
+| MINIOR PLANNING            | 5            |
+| MENTORSHIP                 | 20           |
+| MAJOR MENTORSHIP           | 20           |
+| MINOR MENTORSHIP           | 15           |
+| MINIOR MENTORSHIP          | 10           |
+| DISCUSSION                 | 15           |
+| MAJOR DISCUSSION           | 15           |
+| MINOR DISCUSSION           | 10           |
+| MINIOR DISCUSSION          | 5            |
+| MAJOR CODE RUB             | 10           |
+| MEDIUM CODE RUB            | 5            |
+| MINOR CODE RUB             | 1            |
+| CODE RUB                   | 1            |
+| PROVISION                  | 10           |
+| IMPORT                     | 5            |
+| RELEASE                    | 10           |
+| CONFIG                     | 5            |
+| REVIEW                     | 1            |
+| DOCUMENTATION              | 1            |
+| STANDARD                   | 100          |
+| BUSINES                    | 50           |
 | STATUS                     | 1            |
-| MENTORSHIP                 | 10           |
+| UNKNOWN                    | 0            |
 
 Each one of these categories have been defined above in the previous section.
 
