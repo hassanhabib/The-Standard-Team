@@ -187,7 +187,11 @@ The variables can be subsituted
 | BUSINESS               | Creating documentation that outlines your business processes / Standard Operating Procedures. |
 | IMPORT                 | When you are copying code and tests over from another system with no or minor changes like namespaces |
 | STATUS                 | When updating STATUS information in your design documentation. |
-| MENTORSHIP             | When conducting a meeting under the MENTORSHIP title, the developer is responsible for teaching others. |
+| PLANNING               | |
+| MAJOR PLANNING         | |
+| MEDIUM PLANNING        | |
+| MINOR PLANNING         | |
+| MENTORSHIP             | 60+ minute session. |
 | MAJOR MENTORSHIP       | 60+ minute session. |
 | MEDIUM MENTORSHIP      | 45 minute session. |
 | MINOR MENTORSHIP       | 30 minute session. |
@@ -587,6 +591,10 @@ The following is a list of all types of contributions and the value for each:
 | MAJOR FIX                  | 20           |
 | MEDIUM FIX                 | 10           |
 | MINOR FIX                  | 5            |
+| PLANNING                   | 15           |
+| MAJOR PLANNING             | 15           |
+| MINOR PLANNING             | 10           |
+| MINIOR PLANNING            | 5            |
 | MENTORSHIP                 | 20           |
 | MAJOR MENTORSHIP           | 20           |
 | MINOR MENTORSHIP           | 15           |
