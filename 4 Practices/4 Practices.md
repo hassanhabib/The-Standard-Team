@@ -187,7 +187,7 @@ The variables can be subsituted
 | BUSINESS               | Creating documentation that outlines your business processes / Standard Operating Procedures. |
 | IMPORT                 | When you are copying code and tests over from another system with no or minor changes like namespaces |
 | STATUS                 | When updating STATUS information in your design documentation. |
-| PLANNING               | |
+| PLANNING               | Planning should occur once per feature and involve collaboration across services. Individual work and planning for themselves doesn't quality as planning. Planning involves multiple engineers with a leader who assigns and distributes the tasks across the team. |
 | MAJOR PLANNING         | |
 | MEDIUM PLANNING        | |
 | MINOR PLANNING         | |
