@@ -188,9 +188,9 @@ The variables can be subsituted
 | IMPORT                 | When you are copying code and tests over from another system with no or minor changes like namespaces |
 | STATUS                 | When updating STATUS information in your design documentation. |
 | PLANNING               | Planning should occur once per feature and involve collaboration across services. Individual work and planning for themselves doesn't quality as planning. Planning involves multiple engineers with a leader who assigns and distributes the tasks across the team. |
-| MAJOR PLANNING         | |
-| MEDIUM PLANNING        | |
-| MINOR PLANNING         | |
+| MAJOR PLANNING         | Planning 10+ tasks. |
+| MEDIUM PLANNING        | Planning 5+ tasks. |
+| MINOR PLANNING         | Planning <5 tasks. |
 | MENTORSHIP             | 60+ minute session. |
 | MAJOR MENTORSHIP       | 60+ minute session. |
 | MEDIUM MENTORSHIP      | 45 minute session. |
