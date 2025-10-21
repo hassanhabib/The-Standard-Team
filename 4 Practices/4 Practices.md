@@ -620,7 +620,22 @@ The following is a list of all types of contributions and the value for each:
 
 Each one of these categories have been defined above in the previous section.
 
-### 4.2.1 Ranks
+### 4.2.1 Average Implementation Time
+
+The following table provides the **average estimated time** required to implement different layers or components in The Standard architecture.  
+These times are based on practical experience and are used as a general reference for planning and effort estimation.
+
+| Layer / Component | Average Time |
+|-------------------|--------------|
+| Brokers, Base | ~1 hour |
+| Foundations, Components | ~3 hours |
+| Processing, Orchestration, Coordination, Orchestration Components | ~5 hours |
+| Management, Uber Manager | ~3 hours |
+| Controllers, Pages, Clients | ~1 hour |
+
+These estimates represent typical implementation durations for a single service or component, assuming standard complexity and no external dependencies.
+
+### 4.2.2 Ranks
 The following are the ranks based on the life-time accumalation and contribution to The Standard Community and Standard-Compliant projects:
 | POSITION            | SCORE           |
 |---------------------|-----------------|
