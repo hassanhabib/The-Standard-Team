@@ -177,6 +177,13 @@ The variables can be subsituted
 | MEDIUM FIX             | A fix that has a moderate level of impact on the functionality or performance of a program or system. |
 | MAJOR FIX              | A major bug fix is a significant repair or correction made to a software program or system that addresses a critical or major issue. |
 | DOCUMENTATION          | General documentation |
+| MINOR DOCUMENTATION    | Update to an existing documentation (typo, rewording, small fixes). |
+| MEDIUM DOCUMENTATION   | Adding a new section to existing documentation. |
+| MAJOR DOCUMENTATION    | Creating documentation from scratch for a new feature. |
+| REQUIREMENTS           | General requirement discussions or inputs. |
+| MINOR REQUIREMENTS     | Quick chat or follow-up on existing requirements. |
+| MEDIUM REQUIREMENTS    | Significant change to an existing requirement (e.g. adding new fields). |
+| MAJOR REQUIREMENTS     | A completely new requirement involving multiple features or flows. |
 | CONFIG                 | Any configuration changes i.e. setting up appsettings.json for your various environments. |
 | REVIEW                 | Reviewing submitted work in the context of project standards, and Standard compliance. |
 | STANDARD               | When you update or introduce a new thing in The Standard |
@@ -185,6 +192,9 @@ The variables can be subsituted
 | MEDIUM DESIGN          | Designing 10-14 service methods. |
 | MINOR DESIGN           | Designing <10 service methods. |
 | BUSINESS               | Creating documentation that outlines your business processes / Standard Operating Procedures. |
+| MINOR BUSINESS         | Expansion work for an existing client outside the original scope (Farming – incremental value growth). |
+| MEDIUM BUSINESS        | Initiating and delivering a new business flow or opportunity within an existing client (Farming – strategic account growth). |
+| MAJOR BUSINESS         | Acquiring a new client and initiating a new project from the ground up (Hunting – direct business generation and ownership). |
 | IMPORT                 | When you are copying code and tests over from another system with no or minor changes like namespaces. Should include the component being imported, format: IMPORT: [COMPONENT]: [Description] |
 | STATUS                 | When updating STATUS information in your design documentation. |
 | PLANNING               | Planning should occur once per feature and involve collaboration across services. Individual work and planning for themselves doesn't quality as planning. Planning involves multiple engineers with a leader who assigns and distributes the tasks across the team. |
@@ -613,8 +623,18 @@ The following is a list of all types of contributions and the value for each:
 | CONFIG                     | 5            |
 | REVIEW                     | 1            |
 | DOCUMENTATION              | 1            |
+| MINOR DOCUMENTATION        | 1            |
+| MEDIUM DOCUMENTATION       | 5            |
+| MAJOR DOCUMENTATION        | 10           |
+| REQUIREMENTS               | 5            |
+| MINOR REQUIREMENTS         | 5            |
+| MEDIUM REQUIREMENTS        | 10           |
+| MAJOR REQUIREMENTS         | 20           |
 | STANDARD                   | 100          |
-| BUSINES                    | 50           |
+| BUSINESS                   | 50           |
+| MINOR BUSINESS             | 25           |
+| MEDIUM BUSINESS            | 100          |
+| MAJOR BUSINESS             | 1000         |
 | STATUS                     | 1            |
 | UNKNOWN                    | 0            |
 
